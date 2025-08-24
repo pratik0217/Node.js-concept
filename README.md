@@ -58,3 +58,10 @@ Why need API ?
 <img width="802" height="543" alt="Screenshot 2025-08-23 112426" src="https://github.com/user-attachments/assets/3e30c048-0b02-4b66-9388-1fffafc783a0" />
 
 # Part 5 Fundamental for Nodejs
+- Variable and Functions.
+- Conditions and Loops.
+- Array and Objects.
+- Import functions & Other from other files.
+          - require();
+
+  
