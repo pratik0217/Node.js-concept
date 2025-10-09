@@ -64,4 +64,4 @@ Why need API ?
 - Import functions & Other from other files.
           - require();
 
-  
+<img width="710" height="362" alt="Screenshot 2025-10-09 112748" src="https://github.com/user-attachments/assets/249bb154-ae9f-497a-9a67-4d0c2ea895db" />
