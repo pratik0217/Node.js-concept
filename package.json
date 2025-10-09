@@ -1,0 +1,22 @@
+{
+  "name": "create-own-package.json",
+  "version": "1.0.0",
+  "description": "Learn node.js technologies for fullstack development. I learn create own package.json in node.js part8.",
+  "main": "app.js",
+  "dependencies": {
+    "colors": "^1.4.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pratik0217/Node.js-concept.git"
+  },
+  "author": "pratikjadhav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pratik0217/Node.js-concept/issues"
+  },
+  "homepage": "https://github.com/pratik0217/Node.js-concept#readme"
+}
