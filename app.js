@@ -1,4 +1,2 @@
-// console.log("Youtube : Step by Step code");
-
-var fs = require('fs');
-fs.writeFileSync("nodejs.css","Cascading Style Sheet");
+const data = require('./part5');
+console.log(data.userName);
