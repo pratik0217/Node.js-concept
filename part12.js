@@ -3,6 +3,7 @@ console.log("Understand Client Request");
 const http = require("http");
 http
   .createServer((req, resp) => {
+    resp.setHeader('content-type','text/html')
     console.log(req.url);
     if (req.url == "/") {
       resp.write("<h1>Home Page</h1>");
@@ -15,4 +16,4 @@ http
     }
     resp.end();
   })
-  .listen(4800);
+  .listen(2500);

@@ -1,3 +1,4 @@
 module.exports = {
-    userName : "pratikkkk.pvt"
+    userName : "pratikkkk.pvt",
+    password : 7038302915
 }

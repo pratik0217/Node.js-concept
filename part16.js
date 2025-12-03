@@ -1,36 +1,36 @@
 console.log('Handle form request');
 
-const http = require('http');
-const fs = require('fs');
+const http = require("http");
+const fs = require("fs");
 const queryString = require('querystring');
 
-http.createServer((request, response)=> {
-    fs.readFile('HTML/part15.html','utf-8',(error,data)=> {
+// including htmlfile
+http.createServer((req, response) => {
+    fs.readFile('HTML/part15.html','utf-8', (error,data)=> {
         if(error) {
-            response.writeHead(500, {"content-type": "text/plain"});
-            response.end('Internal Server Error');
-            return;
+            response.writeHead(500, {"content-type":"text/plain"});
+            response.end("internal server error");
         }
-
-        if(request.url == '/') {
+        
+        response.writeHead(200, {"content-type":"text/html"});
+        if(req.url == '/') {
             response.write(data);
-        } else if(request.url == '/submit') {
+        } else if(req.url == '/submit') {
+            // getData event
             let formData = [];
-            // getFormData
-            request.on('data',(chunk)=> {
+            req.on('data',(chunk)=> {
                 formData.push(chunk);
             })
 
-            // EndEventFormData
-            request.on('end',()=> {
-                let submitData = Buffer.concat(formData).toString(); // not showing the readable data.
-                // console.log(submitData);
+            // endData event
+            req.on('end',()=> {
+                let submitData = Buffer.concat(formData).toString();
+                // console.log(submitData) // not readable format data.
                 let readableSubmitData = queryString.parse(submitData);
-                console.log(readableSubmitData); // showing readable data
+                console.log(readableSubmitData);
             })
-            // response.writeHead(200,{"content-type":"text/html"});
-            response.write(`<p>Data Submitted!</p>`);
+            response.write("<h1>Data Submitted..!</h1>");
         }
         response.end();
     })
-}).listen(4800);
+  }).listen(4800);
